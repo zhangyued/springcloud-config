@@ -1,0 +1,20 @@
+﻿spring: 
+  profiles: 
+    active:  
+      - dev
+---
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: service-member-8001 #自定义服务名称
+    prefer-ip-address: true #访问路径显示ip地址
+server:
+  port: 8001
+spring:
+    profiles: dev
+    application: 
+        name: service-member
+info:
+  app.name: service-member
